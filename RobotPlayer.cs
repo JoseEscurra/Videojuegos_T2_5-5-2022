@@ -104,6 +104,15 @@ public class RobotPlayer : MonoBehaviour
             vidas--;
         }   
     }
+    
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        var tag = other.gameObject.tag;
+        if(tag == "boton")
+        {
+            SceneManager.LoadScene("Escena2");
+        }    
+    }
 
 
 }
